@@ -149,7 +149,7 @@ uLen		要写到串口的长度
 返回值		正常情况下，返回值 = uLen
 			当输出缓冲区不足时，返回值 < uLen
 **********************************************/
-UartBufLen UART_Write(UART_HANDLE pH,const U8 * inBuf,UartBufLen uLen)
+static UartBufLen _UART_WriteHAL(UART_HANDLE pH,const U8 * inBuf,UartBufLen uLen)
 {
 	PUART_OPERATOR pU = (PUART_OPERATOR)pH;
 	U8 uPushLen = PushTxBytes(pU,inBuf,uLen);
@@ -158,7 +158,7 @@ UartBufLen UART_Write(UART_HANDLE pH,const U8 * inBuf,UartBufLen uLen)
 	//如果 uTxActive 为1，则新Push的字节会跟着自动发，不用额外处理
 	if ( 0 == pU->uTxActive ) {
 		pU->uTxActive = 1;
-		if (0 == pU->uNum) {		
+		if (0 == pU->uNum) {
 			UTX0IF = 1;			
 		}
 		else {
@@ -168,11 +168,11 @@ UartBufLen UART_Write(UART_HANDLE pH,const U8 * inBuf,UartBufLen uLen)
 	return uPushLen;
 }
 
-void UART_WriteSync(UART_HANDLE pH,const U8 * inBuf,UartBufLen uLen)
+void UART_Write(UART_HANDLE pH,const U8 * inBuf,UartBufLen uLen)
 {
 	UartBufLen uWrited = 0;
 	do
 	{
-		uWrited += UART_Write(pH,inBuf + uWrited,uLen - uWrited);
+		uWrited += _UART_WriteHAL(pH,inBuf + uWrited,uLen - uWrited);
 	}while(uWrited != uLen);
 }

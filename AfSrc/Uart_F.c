@@ -51,8 +51,8 @@ UART_HANDLE			UART_Open(U8 uNum,U16 wBaudrate)
 		IEN2 |= (1<<2);			//开发送中断		
 		return &u0;
 		break;
-	case 1:
 		
+	case 1:		
 		return &u1;
 		break;
 	default:
@@ -65,9 +65,22 @@ UART_HANDLE			UART_Open(U8 uNum,U16 wBaudrate)
 //===========================================下面调试输出专用
 UART_HANDLE g_uHdbg = 0;
 
-void SetDebugUartHandle(UART_HANDLE uH)
+void UART_SetDebugHandle(UART_HANDLE uH)
 {
 	g_uHdbg = uH;
+}
+
+
+void UART_SetReadTimeout(UART_HANDLE uH,U16 wTimeout)
+{
+	PUART_OPERATOR pU = (PUART_OPERATOR)uH;
+	pU->wReadTimeout = wTimeout;
+}
+
+void UART_SetReadCallback(UART_HANDLE uH,fn_Readed_t pfnReaded)
+{
+	PUART_OPERATOR pU = (PUART_OPERATOR)uH;
+	pU->pfnReaded = pfnReaded;
 }
 
 
@@ -87,7 +100,7 @@ void Uprintf(const char* ch,...)
 	va_start(ap,ch);	
 	iLen = vsprintf(_uFormatBuf,ch,ap);
 //	UART_Write(pH,(U8*)_uFormatBuf,iLen);
-	UART_WriteSync(g_uHdbg,(U8*)_uFormatBuf,iLen);
+	UART_Write(g_uHdbg,(U8*)_uFormatBuf,iLen);
 	va_end(ap);
 }
 //------------------------------------------------

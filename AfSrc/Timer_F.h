@@ -12,7 +12,13 @@ Description
 
 
 #include <iocc2530.h>
-//#include "TypeDef_F.h"
+#include "TypeDef_F.h"
+
+
+//===================================！！！！一定要读我！！！！
+//TMR_Poll函数要周期性地被调用。才能产生各种与定时器相关的事件
+//例如串口接收超时事件
+void TMR_Poll(void);
 
 
 void TimerInit(void);
@@ -23,6 +29,7 @@ U32 GetTickCount(void);			//取时间 Tick ，单位为 0.1 mS
 
 typedef void (*PFN_TimerPorc)(void);
 void StartOnceTimer(U16 time,PFN_TimerPorc pfnTimerProc);
+
 
 
 

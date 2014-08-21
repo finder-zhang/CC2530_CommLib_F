@@ -14,5 +14,7 @@ set AFINC_PATH=%IAR_EW8051_DIR%\AfLib_F\inc
 if not exist "%AFLIB_PATH%" md "%AFLIB_PATH%"
 if not exist "%AFINC_PATH%" md "%AFINC_PATH%"
 
-copy ".\Debug\Exe\AfLib_F.lib" "%AFLIB_PATH%"
 copy ".\AfSrc\*.h"             "%AFINC_PATH%"
+copy ".\Debug\Exe\AfLib_F.lib" "%AFLIB_PATH%"
+
+pause

@@ -1,13 +1,12 @@
 
 #include <iocc2530.h>
 
-#include "Includes_F.h"
+//#include "Includes_F.h"
 
 #include "Timer_F.h"
 
-#include "osal.h"
+#include "UartInternal_F.h"
 
-#include "CP_App.h"
 
 static volatile U32 _TimeTick = 0;		//系统时间，单位为 十分之一 毫秒
 
@@ -81,6 +80,7 @@ __interrupt void Timer3_ISR(void)
 	//=======================================
 	//						  系统1mS定时使用
 	++_TimeTick;
+	UART_TimeTick();
 	
 	//=======================================
 	//							每5mS执行一次
@@ -92,7 +92,7 @@ __interrupt void Timer3_ISR(void)
 //		if (g_fnTimeToCheckKey) {
 //			g_fnTimeToCheckKey();
 //		}
-		osal_set_event(CP_App_TaskID,CP_EVENT_CHECK_KEY);
+		//osal_set_event(CP_App_TaskID,CP_EVENT_CHECK_KEY);
 	}
 	
 //	if ( T3CH0IF ) {
@@ -121,3 +121,9 @@ __interrupt void Timer3_ISR(void)
 //	
 //	LED4 ^= 1;
 //}
+
+
+void TMR_Poll(void)
+{
+	UART_Poll();
+}

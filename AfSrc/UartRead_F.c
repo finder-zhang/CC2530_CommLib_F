@@ -17,8 +17,6 @@
 
 
 
-
-
 //=============================================串口0接收中断
 __interrupt void Uart0Rx_ISR(void);
 #pragma vector = URX0_VECTOR 
@@ -26,6 +24,7 @@ __interrupt void Uart0Rx_ISR(void)
 { 
     URX0IF = 0;       // 清中断标志
 	PushRxByte(&u0,U0DBUF);
+	u0.wReadTimeoutCount = 0;
 }
 
 
@@ -36,8 +35,8 @@ __interrupt void Uart1Rx_ISR(void)
 { 
     URX1IF = 0;       // 清中断标志
 	PushRxByte(&u1,U1DBUF);
+	u1.wReadTimeoutCount = 0;
 }
-
 
 
 //============================================内部函数
@@ -59,7 +58,7 @@ static U8			PushRxByte(UART_HANDLE pH,U8 uPush)
 	++pU->uRxTail;
 	if ( pU->uRxTail >= U0_RX_BUF_SIZE ) {
 		pU->uRxTail = 0;
-	};	
+	}
 	++pU->uRxLen;
 	return TRUE;
 }
@@ -72,7 +71,7 @@ static U8			PopRxByte(UART_HANDLE pH)
 	PUART_OPERATOR pU = (PUART_OPERATOR)pH;
 	U8 uPop = 0;
 	if ( IsRxEmpty(pH) ) {
-		return 0xFF;
+		return 'a';
 	}
 	uPop = pU->uRxBuf[pU->uRxHead];
 	++pU->uRxHead;
@@ -94,6 +93,41 @@ static U8			IsRxFull(UART_HANDLE pH)
 
 
 //=============================================外部接口函数
+
+//时间刷新，该函数以0.1秒为周期执行，由定时器负责执行
+//不可长时间执行
+void UART_TimeTick()
+{
+	if (u0.wReadTimeoutCount < u0.wReadTimeout) {
+		++u0.wReadTimeoutCount;
+	}
+	if (u1.wReadTimeoutCount < u1.wReadTimeout) {
+		++u0.wReadTimeoutCount;
+	}
+}
+
+//串口检测，该函数由主循环周期性地调用
+void UART_Poll(void)
+{
+	//如果超时时间到，并且有长度，则执行读超时
+	if (	(u0.wReadTimeoutCount >= u0.wReadTimeout)
+		&&	(u0.uRxLen > 0)		)
+	{
+		if ( u0.pfnReaded ) {
+			u0.pfnReaded();
+		}
+	}
+	
+		
+	if (	(u1.wReadTimeoutCount >= u1.wReadTimeout)
+		&&	(u1.uRxLen > 0)		)
+	{
+		if ( u1.pfnReaded ) {
+			u1.pfnReaded();
+		}
+	}
+}
+
 
 //求长度
 UartBufLen	UART_GetRxLen(UART_HANDLE pH)
