@@ -48,12 +48,19 @@ UartBufLen			UART_Read(UART_HANDLE pH,U8 *outBuf,UartBufLen uLen);
 //如果任意时候都要输出，请使用	Aprintf
 //extern UART_HANDLE g_uHdbg;
 
+#define _TOSTR(str)		#str
+#define TOSTR(str)		_TOSTR(str)
+#define Dpvar(var)		Uprintf(TOSTR(var = %d\r\n),var)
+
 #define Aprintf(...)		Uprintf(__VA_ARGS__)
 
 #ifdef CP_DEBUG
 	#define Dprintf(...)	Uprintf(__VA_ARGS__)
+	#define Dpvar(var)		Uprintf(TOSTR(var = %d\r\n),var)
+	#define Dpxvar(var)		Uprintf(TOSTR(var = %x\r\n),var)
 #else
 	#define Dprintf(...)	;
+	#define Dpvar(var)		;
 #endif //CP_DEBUG
 
 

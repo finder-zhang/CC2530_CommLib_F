@@ -12,8 +12,8 @@
 #include "Uart_F.h"
 
 //输入与输出缓冲区，可以根据需要改变其大小，只能在编译期改，不可在运行期改
-#define U0_RX_BUF_SIZE						(240)
-#define U0_TX_BUF_SIZE						(16)
+#define U0_RX_BUF_SIZE						( (UartBufLen)(240) )
+#define U0_TX_BUF_SIZE						( (UartBufLen)( 16) )
 
 
 //外部的 UART_HANDLE 到达内部转换成 UART_OPERATOR ，与串口相关的状态数据

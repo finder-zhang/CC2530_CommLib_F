@@ -2068,6 +2068,12 @@
     <name>$PROJ_DIR$\AfSrc\CommonDef_F.h</name>
   </file>
   <file>
+    <name>$PROJ_DIR$\AfSrc\DataTransEnDecode_F.c</name>
+  </file>
+  <file>
+    <name>$PROJ_DIR$\AfSrc\DataTransEnDecode_F.h</name>
+  </file>
+  <file>
     <name>$PROJ_DIR$\AfSrc\Timer_F.c</name>
   </file>
   <file>
