@@ -50,14 +50,16 @@ UartBufLen			UART_Read(UART_HANDLE pH,U8 *outBuf,UartBufLen uLen);
 
 #define _TOSTR(str)		#str
 #define TOSTR(str)		_TOSTR(str)
-#define Dpvar(var)		Uprintf(TOSTR(var = %d\r\n),var)
+
 
 #define Aprintf(...)		Uprintf(__VA_ARGS__)
 
 #ifdef CP_DEBUG
-	#define Dprintf(...)	Uprintf(__VA_ARGS__)
-	#define Dpvar(var)		Uprintf(TOSTR(var = %d\r\n),var)
-	#define Dpxvar(var)		Uprintf(TOSTR(var = %x\r\n),var)
+	#define Dprintf(...)			Uprintf(__VA_ARGS__)
+	#define Dpvar(var)				Uprintf(TOSTR(var = %d\r\n),var)
+	#define Dpxvar(var)				Uprintf(TOSTR(var = %x\r\n),var)
+	#define Dpvarc(var,comment)		Uprintf(TOSTR(comment var = %d\r\n),var)
+	#define Dpxvarc(var,comment)	Uprintf(TOSTR(comment var = %x\r\n),var)
 #else
 	#define Dprintf(...)	;
 	#define Dpvar(var)		;
