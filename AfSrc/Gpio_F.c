@@ -3,10 +3,6 @@
 
 #include "Gpio_F.h"
 
-#include "osal.h"
-
-#include "CP_APP.h"
-
 void GpioInit(void)
 {
 	//===========================大板 IO 口初始化
@@ -134,7 +130,7 @@ __interrupt void Gpio2_ISR(void)
 			
 			if ( NO_PRESS != _uS2Status ) {
 				_dwS2DnTm = _dwS2UpTm;
-				osal_set_event(CP_App_TaskID,CP_EVENT_CHECK_KEY);
+				//osal_set_event(CP_App_TaskID,CP_EVENT_CHECK_KEY);
 			}
 		}
 	}
