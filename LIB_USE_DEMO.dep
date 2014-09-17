@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>3021507716</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Debug\Exe\LIB_USE_DEMO.d51</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.r51</file>
+      <file>$PROJ_DIR$\main.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\LIB_USE_DEMO.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\DataTransEnDecode_F.r51</file>
+      <file>$PROJ_DIR$\AfSrc\DataTransEnDecode_F.c</file>
+      <file>$PROJ_DIR$\AfSrc\DataTransEnDecode_F.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\DataTransEnDecode_F.pbi</file>
+      <file>$PROJ_DIR$\AfSrc\TypeDef_F.h</file>
+      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
+      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
+      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_CC2530F256_banked.xcl</file>
+      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
+      <file>$TOOLKIT_DIR$\inc\clib\stdlib.h</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\LIB_USE_DEMO.d51</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 12 5 2 13</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 0</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 2</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11 10 14 7 9</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 11 10 14 7 9</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Obj\LIB_USE_DEMO.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 8 0</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 1</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\DataTransEnDecode_F.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 5</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7 9</file>
+        </tool>
+        <tool>
+          <name>ICC8051</name>
+          <file> 7 9</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+
