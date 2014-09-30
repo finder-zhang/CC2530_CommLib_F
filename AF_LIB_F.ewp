@@ -2064,6 +2064,24 @@
       <data/>
     </settings>
   </configuration>
+  <group>
+    <name>Uart</name>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\Uart_F.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\Uart_F.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\UartInternal_F.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\UartRead_F.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\UartWrite_F.c</name>
+    </file>
+  </group>
   <file>
     <name>$PROJ_DIR$\AfSrc\CommonDef_F.h</name>
   </file>
@@ -2074,10 +2092,22 @@
     <name>$PROJ_DIR$\AfSrc\DataTransEnDecode_F.h</name>
   </file>
   <file>
+    <name>$PROJ_DIR$\AfSrc\Debug_F.c</name>
+  </file>
+  <file>
+    <name>$PROJ_DIR$\AfSrc\Debug_F.h</name>
+  </file>
+  <file>
     <name>$PROJ_DIR$\AfSrc\Gpio_F.c</name>
   </file>
   <file>
     <name>$PROJ_DIR$\AfSrc\Gpio_F.h</name>
+  </file>
+  <file>
+    <name>$PROJ_DIR$\AfSrc\HalAes_F.c</name>
+  </file>
+  <file>
+    <name>$PROJ_DIR$\AfSrc\HalAes_F.h</name>
   </file>
   <file>
     <name>$PROJ_DIR$\AfSrc\Led_F.c</name>
@@ -2093,21 +2123,6 @@
   </file>
   <file>
     <name>$PROJ_DIR$\AfSrc\TypeDef_F.h</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\AfSrc\Uart_F.c</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\AfSrc\Uart_F.h</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\AfSrc\UartInternal_F.h</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\AfSrc\UartRead_F.c</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\AfSrc\UartWrite_F.c</name>
   </file>
 </project>
 

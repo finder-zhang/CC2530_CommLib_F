@@ -1,7 +1,7 @@
 
 
 #include "DataTransEnDecode_F.h"
-
+#include <string.h>
 
 
 
@@ -179,4 +179,80 @@ void DataTransInit(PTransEnDecodeFunc_t pTransFunc)
 {
 	pTransFunc->pfnEncode = _DataEncode;
 	pTransFunc->pfnDecode = _DataDecode;
+}
+
+static CatchPackageStatus		_cps = CPS_NULL;
+static U8		_uRxBuf[256];
+static U16		_wRxPtr = 0;
+static BOOL		_bPackageOk = FALSE;
+//static U16		_wRxLen = 0;
+
+inline static void _Rollback()
+{
+	_wRxPtr = 0;
+	_cps = CPS_NULL;	
+}
+
+inline static void _NewStart(U8 uByte)
+{
+	_uRxBuf[0] = uByte;
+	_wRxPtr = 1;
+	_cps = CPS_CATCHING;	
+}
+
+
+
+CatchPackageStatus DEN_CatchPackage(U8 uByte)
+{
+	//数据包已经成功但并未被读取之前，丢弃输入的字节
+	if ( TRUE == _bPackageOk ) {
+		_cps = CPS_NULL;
+		return _cps;
+	}
+	
+	//任意时刻，只要见到 CODE_STX 就是一个全新的开始。
+	if ( CODE_STX == uByte ) {
+//		_cps = CPS_CATCHING;
+//		_uRxBuf[0] = CODE_STX;
+//		_wRxPtr = 1;
+		_NewStart(uByte);
+		return _cps;
+	}
+	
+	
+	if ( CODE_ETX == uByte ) {
+		//收到 CODE_ETX 的时候，如果状态不对，则全部清空重来
+		if ( _cps != CPS_CATCHING ) {
+//			_cps = CPS_NULL;
+//			_wRxPtr = 0;
+			_Rollback();
+			return _cps;
+		}
+		//收到 CODE_ETX 的时候，如果状态对，则数据包接收成功
+		else {
+			_uRxBuf[_wRxPtr] = CODE_ETX;
+			++_wRxPtr;
+			_cps = CPS_COMPLETE;
+			_bPackageOk = TRUE;
+			return _cps;
+		}
+	}
+	
+	
+	//收到其他的数据，在 CATCHING 状态下，把数据放起来
+	if ( CPS_CATCHING == _cps ) {
+		++_wRxPtr;
+		_uRxBuf[_wRxPtr] = uByte;
+	}
+
+	return _cps;
+}
+
+
+BOOL DEN_GetPackage(U16* pwLen,U8* pData)
+{
+	if ( FALSE == _bPackageOk ) {
+		return FALSE;
+	}
+	return _DataDecode(_uRxBuf,_wRxPtr,pData,pwLen);
 }

@@ -2,166 +2,55 @@
 
 <Workspace>
   <ConfigDictionary>
-    <CurrentConfigs>
-      <Project>LIB_USE_DEMO/Debug</Project>
-    </CurrentConfigs>
-  </ConfigDictionary>
+    
+  <CurrentConfigs><Project>LIB_USE_DEMO/Debug</Project></CurrentConfigs></ConfigDictionary>
   <Desktop>
     <Static>
       <Workspace>
         <ColumnWidths>
-          <Column0>216</Column0>
-          <Column1>27</Column1>
-          <Column2>27</Column2>
-          <Column3>27</Column3>
-        </ColumnWidths>
+          
+          
+          
+          
+        <Column0>209</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       </Workspace>
       <Build>
-        <ColumnWidth0>20</ColumnWidth0>
-        <ColumnWidth1>1395</ColumnWidth1>
-        <ColumnWidth2>372</ColumnWidth2>
-        <ColumnWidth3>93</ColumnWidth3>
-      </Build>
+        
+        
+        
+        
+      <PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1395</ColumnWidth1><ColumnWidth2>372</ColumnWidth2><ColumnWidth3>93</ColumnWidth3></Build>
       <TerminalIO/>
-    </Static>
+    <Disassembly><MixedMode>1</MixedMode><CodeCovShow>1</CodeCovShow><InstrProfShow>1</InstrProfShow></Disassembly><Debug-Log><ColumnWidth0>18</ColumnWidth0><ColumnWidth1>1863</ColumnWidth1></Debug-Log></Static>
     <Windows>
-      <Wnd2>
+      
+      
+    <Wnd0>
         <Tabs>
           <Tab>
             <Identity>TabID-8522-25696</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
-              <NodeDict>
-                <ExpandedNode>LIB_USE_DEMO</ExpandedNode>
-              </NodeDict>
-            </Session>
+              
+            <NodeDict><ExpandedNode>LIB_USE_DEMO</ExpandedNode><ExpandedNode>LIB_USE_DEMO/AfSrc</ExpandedNode><ExpandedNode>LIB_USE_DEMO/AfTestApp</ExpandedNode><ExpandedNode>LIB_USE_DEMO/Output</ExpandedNode></NodeDict></Session>
           </Tab>
         </Tabs>
-        <SelectedTab>0</SelectedTab>
-      </Wnd2>
-      <Wnd3>
-        <Tabs>
-          <Tab>
-            <Identity>TabID-2458-28880</Identity>
-            <TabName>Build</TabName>
-            <Factory>Build</Factory>
-            <Session/>
-          </Tab>
-        </Tabs>
-        <SelectedTab>0</SelectedTab>
-      </Wnd3>
-    </Windows>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd2><Tabs><Tab><Identity>TabID-28625-22707</Identity><TabName>Build</TabName><Factory>Build</Factory><Session/></Tab><Tab><Identity>TabID-16075-14694</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd2></Windows>
     <Editor>
-      <Pane>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 6.0\8051\doc\infocenter\index.ENU.html</Filename>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\main.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>1030</SelStart>
-          <SelEnd>1030</SelEnd>
-        </Tab>
-        <ActiveTab>1</ActiveTab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\AfSrc\DataTransEnDecode_F.h</Filename>
-          <XPos>0</XPos>
-          <YPos>6</YPos>
-          <SelStart>434</SelStart>
-          <SelEnd>434</SelEnd>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\AfSrc\DataTransEnDecode_F.c</Filename>
-          <XPos>0</XPos>
-          <YPos>75</YPos>
-          <SelStart>1541</SelStart>
-          <SelEnd>1541</SelEnd>
-        </Tab>
-      </Pane>
-      <ActivePane>0</ActivePane>
-      <Sizes>
-        <Pane>
-          <X>1000000</X>
-          <Y>1000000</Y>
-        </Pane>
-      </Sizes>
-      <SplitMode>1</SplitMode>
-    </Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\DataTransEnDecodeApp_F.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>305</SelStart><SelEnd>305</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\HalAes_F.h</Filename><XPos>0</XPos><YPos>6</YPos><SelStart>197</SelStart><SelEnd>197</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfTestAppSrc\main.c</Filename><XPos>0</XPos><YPos>30</YPos><SelStart>772</SelStart><SelEnd>772</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\HalAes_F.c</Filename><XPos>0</XPos><YPos>66</YPos><SelStart>1214</SelStart><SelEnd>1214</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 6.0\8051\inc\iocc2530.h</Filename><XPos>0</XPos><YPos>157</YPos><SelStart>10020</SelStart><SelEnd>10025</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\Uart_F.h</Filename><XPos>0</XPos><YPos>3</YPos><SelStart>717</SelStart><SelEnd>717</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\Uart_F.c</Filename><XPos>0</XPos><YPos>94</YPos><SelStart>1937</SelStart><SelEnd>1937</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\Timer_F.h</Filename><XPos>0</XPos><YPos>12</YPos><SelStart>452</SelStart><SelEnd>452</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\Timer_F.c</Filename><XPos>0</XPos><YPos>59</YPos><SelStart>1689</SelStart><SelEnd>1689</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\PowerAndClock_F.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>74</SelStart><SelEnd>83</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\UartRead_F.c</Filename><XPos>0</XPos><YPos>148</YPos><SelStart>3225</SelStart><SelEnd>3225</SelEnd></Tab><ActiveTab>10</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\Dma_F.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>66</SelStart><SelEnd>219</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\Dma_F.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>104</SelStart><SelEnd>513</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\hal_aes.h</Filename><XPos>0</XPos><YPos>72</YPos><SelStart>4037</SelStart><SelEnd>4037</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\hal_aes.c</Filename><XPos>0</XPos><YPos>141</YPos><SelStart>6803</SelStart><SelEnd>6803</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\TypeDef_F.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>301</SelStart><SelEnd>301</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\CommonDef_F.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>184</SelStart><SelEnd>184</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 6.0\8051\inc\clib\string.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>318</SelStart><SelEnd>318</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfTestAppSrc\AesTest.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>571</SelStart><SelEnd>571</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\PowerAndClock_F.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>544</SelStart><SelEnd>544</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\Debug_F.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>69</SelStart><SelEnd>109</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\AfSrc\Debug_F.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>65</SelStart><SelEnd>65</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
-      <Top>
-        <Row0>
-          <Sizes>
-            <Toolbar-010bd6c8>
-              <key>iaridepm.enu1</key>
-            </Toolbar-010bd6c8>
-          </Sizes>
-        </Row0>
-        <Row1>
-          <Sizes/>
-        </Row1>
-        <Row2>
-          <Sizes/>
-        </Row2>
-      </Top>
-      <Left>
-        <Row0>
-          <Sizes>
-            <Wnd2>
-              <Rect>
-                <Top>-2</Top>
-                <Left>-2</Left>
-                <Bottom>530</Bottom>
-                <Right>290</Right>
-                <x>-2</x>
-                <y>-2</y>
-                <xscreen>200</xscreen>
-                <yscreen>200</yscreen>
-                <sizeHorzCX>104167</sizeHorzCX>
-                <sizeHorzCY>200401</sizeHorzCY>
-                <sizeVertCX>152083</sizeVertCX>
-                <sizeVertCY>533066</sizeVertCY>
-              </Rect>
-            </Wnd2>
-          </Sizes>
-        </Row0>
-      </Left>
-      <Right>
-        <Row0>
-          <Sizes/>
-        </Row0>
-      </Right>
-      <Bottom>
-        <Row0>
-          <Sizes>
-            <Wnd3>
-              <Rect>
-                <Top>-2</Top>
-                <Left>-2</Left>
-                <Bottom>423</Bottom>
-                <Right>1922</Right>
-                <x>-2</x>
-                <y>-2</y>
-                <xscreen>1924</xscreen>
-                <yscreen>425</yscreen>
-                <sizeHorzCX>1002083</sizeHorzCX>
-                <sizeHorzCY>425852</sizeHorzCY>
-                <sizeVertCX>104167</sizeVertCX>
-                <sizeVertCY>200401</sizeVertCY>
-              </Rect>
-            </Wnd3>
-          </Sizes>
-        </Row0>
-      </Bottom>
-      <Float>
-        <Sizes/>
-      </Float>
-    </Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-0257d6b0><key>iaridepm.enu1</key></Toolbar-0257d6b0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>608</Bottom><Right>300</Right><x>-2</x><y>-2</y><xscreen>92</xscreen><yscreen>179</yscreen><sizeHorzCX>47917</sizeHorzCX><sizeHorzCY>179359</sizeHorzCY><sizeVertCX>157292</sizeVertCX><sizeVertCY>611222</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>345</Bottom><Right>1922</Right><x>-2</x><y>-2</y><xscreen>1924</xscreen><yscreen>347</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>347695</sizeHorzCY><sizeVertCX>47917</sizeVertCX><sizeVertCY>179359</sizeVertCY></Rect></Wnd2></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 

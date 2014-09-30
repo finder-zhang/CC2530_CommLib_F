@@ -23,7 +23,7 @@ void TMR_Poll(void);
 
 void TimerInit(void);
 
-void DelayMs(U8 uTime);
+void DelayMs(U16 wTime);
 
 U32 GetTickCount(void);			//取时间 Tick ，单位为 0.1 mS
 

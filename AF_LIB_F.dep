@@ -2,101 +2,197 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>570772868</fileChecksum>
+  <fileChecksum>1984745276</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
+      <file>$PROJ_DIR$\AfSrc\Uart_F.c</file>
+      <file>$PROJ_DIR$\AfSrc\Uart_F.h</file>
+      <file>$PROJ_DIR$\AfSrc\UartRead_F.c</file>
+      <file>$PROJ_DIR$\AfSrc\UartInternal_F.h</file>
+      <file>$PROJ_DIR$\AfSrc\UartWrite_F.c</file>
       <file>$PROJ_DIR$\AfSrc\CommonDef_F.h</file>
       <file>$PROJ_DIR$\AfSrc\DataTransEnDecode_F.c</file>
       <file>$PROJ_DIR$\AfSrc\DataTransEnDecode_F.h</file>
+      <file>$PROJ_DIR$\AfSrc\Debug_F.c</file>
+      <file>$PROJ_DIR$\AfSrc\Debug_F.h</file>
       <file>$PROJ_DIR$\AfSrc\Gpio_F.c</file>
       <file>$PROJ_DIR$\AfSrc\Gpio_F.h</file>
+      <file>$PROJ_DIR$\AfSrc\HalAes_F.c</file>
+      <file>$PROJ_DIR$\AfSrc\HalAes_F.h</file>
       <file>$PROJ_DIR$\AfSrc\Led_F.c</file>
       <file>$PROJ_DIR$\AfSrc\Led_F.h</file>
       <file>$PROJ_DIR$\AfSrc\Timer_F.c</file>
       <file>$PROJ_DIR$\AfSrc\Timer_F.h</file>
       <file>$PROJ_DIR$\AfSrc\TypeDef_F.h</file>
-      <file>$PROJ_DIR$\AfSrc\Uart_F.c</file>
-      <file>$PROJ_DIR$\AfSrc\Uart_F.h</file>
-      <file>$PROJ_DIR$\AfSrc\UartWrite_F.c</file>
-      <file>$PROJ_DIR$\AfSrc\UartRead_F.c</file>
-      <file>$PROJ_DIR$\AfSrc\UartInternal_F.h</file>
-      <file>$PROJ_DIR$\Function_F.h</file>
-      <file>$PROJ_DIR$\..\..\AF_LIB_F\Debug\Exe\AfLib_F.lib</file>
-      <file>$PROJ_DIR$\Debug\Obj\UartIsr_F.r51</file>
-      <file>$PROJ_DIR$\Function_F.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\Timer_F.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\DataTransEnDecode_F.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\UartIsr_F.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\UartRead_F.r51</file>
-      <file>$PROJ_DIR$\Debug\Exe\AF_LIB_F.r51</file>
-      <file>$PROJ_DIR$\..\..\AF_LIB_F\Debug\Exe\AF_LIB_F.lib</file>
-      <file>$PROJ_DIR$\Debug\Obj\Function_F.pbi</file>
-      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\Uart_F.h</file>
-      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\Uart_F.c</file>
-      <file>$TOOLKIT_DIR$\inc\clib\stdio.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\UartRead_F.pbi</file>
-      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\Gpio_F.h</file>
-      <file>$TOOLKIT_DIR$\inc\clib\math.h</file>
-      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\Includes_F.h</file>
-      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
-      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\Led_F.h</file>
-      <file>$TOOLKIT_DIR$\inc\clib\stdarg.h</file>
-      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\PowerAndClock_F.h</file>
-      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\UartWrite_F.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\DataTransEnDecode_F.r51</file>
       <file>$PROJ_DIR$\Debug\Obj\UartBase_F.r51</file>
-      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\UartIsr_F.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\Debug_F.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\clib\stdio.h</file>
+      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\Uart_F.c</file>
+      <file>$PROJ_DIR$\..\..\AF_LIB_F\Debug\Exe\AfLib_F.lib</file>
+      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\CommonDef_F.h</file>
+      <file>$PROJ_DIR$\Function_F.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\UartRead_F.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\Debug_F.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\Timer_F.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\UartIsr_F.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\DataTransEnDecode_F.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\DataTransEnDecode_F.r51</file>
       <file>$PROJ_DIR$\Debug\Obj\UartBase_F.pbi</file>
+      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\Includes_F.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\UartBasePackage_F.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\UartDecodeIF_F.pbi</file>
+      <file>$PROJ_DIR$\AfSrc\uart_pkg\UartBase_F.c</file>
+      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\PowerAndClock_F.h</file>
+      <file>$PROJ_DIR$\AfSrc\uart_pkg\UartBase_F.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\UartIsr_F.r51</file>
+      <file>$PROJ_DIR$\Function_F.h</file>
       <file>$PROJ_DIR$\Debug\Obj\Uart_F.pbi</file>
+      <file>$PROJ_DIR$\AfSrc\KeyCheck_F.h</file>
+      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\UartIsr_F.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\Uart_F.r51</file>
       <file>$PROJ_DIR$\Debug\Exe\AF_LIB_F.lib</file>
       <file>$PROJ_DIR$\..\CC2530_TEST_SRC\Interrupt_F.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\UartBasePackage_F.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\AF_LIB_F.pbd</file>
       <file>$PROJ_DIR$\..\CC2530_TEST_SRC\KeyCheck_F.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\UartDecodeIF_F.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\Timer_F.pbi</file>
-      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\CommonDef_F.h</file>
-      <file>$PROJ_DIR$\AfSrc\uart_pkg\UartBase_F.c</file>
-      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\TypeDef_F.h</file>
-      <file>$PROJ_DIR$\AfSrc\uart_pkg\UartBase_F.h</file>
-      <file>$PROJ_DIR$\AfSrc\uart_pkg\UartBasePackage_F.c</file>
+      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\Debug_F.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\AfLib_F.lib</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.r51</file>
+      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\Timer_F.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\Function_F.r51</file>
+      <file>$TOOLKIT_DIR$\inc\clib\stdlib.h</file>
+      <file>$PROJ_DIR$\AfSrc\main.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\UartWrite_F.r51</file>
       <file>$PROJ_DIR$\AfSrc\uart_pkg\UartBasePackage_F.h</file>
+      <file>$PROJ_DIR$\AfSrc\uart_pkg\UartBasePackage_F.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\Function_F.pbi</file>
+      <file>$PROJ_DIR$\AfSrc\uart_pkg\UartDecodeIF_F.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\UartRead_F.r51</file>
+      <file>$PROJ_DIR$\AfSrc\uart_pkg\UartPackageIF_F.h</file>
+      <file>$PROJ_DIR$\..\..\AF_LIB_F\Debug\Exe\AF_LIB_F.lib</file>
+      <file>$PROJ_DIR$\AfSrc\uart_pkg\UartPackageIF_F.c</file>
+      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\Uart_F.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\Timer_F.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\AF_LIB_F.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\Gpio_F.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\UartPackageIF_F.pbi</file>
+      <file>$PROJ_DIR$\AfSrc\Includes_F.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\Led_F.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\Gpio_F.pbi</file>
+      <file>$PROJ_DIR$\AfSrc\Interrupt_F.h</file>
+      <file>$PROJ_DIR$\AfSrc\PowerAndClock_F.h</file>
+      <file>$TOOLKIT_DIR$\inc\clib\math.h</file>
+      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\Gpio_F.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\AF_LIB_F.r51</file>
+      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\TypeDef_F.h</file>
+      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\Led_F.h</file>
       <file>$PROJ_DIR$\..\CC2530_TEST_SRC\UartInternal_F.h</file>
       <file>$PROJ_DIR$\..\CC2530_TEST_SRC\UartRead_F.c</file>
       <file>$PROJ_DIR$\..\CC2530_TEST_SRC\UartWrite_F.c</file>
-      <file>$PROJ_DIR$\AfSrc\uart_pkg\UartDecodeIF_F.c</file>
-      <file>$PROJ_DIR$\AfSrc\uart_pkg\UartPackageIF_F.c</file>
-      <file>$PROJ_DIR$\AfSrc\uart_pkg\UartPackageIF_F.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\UartPackageIF_F.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\Led_F.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\Gpio_F.r51</file>
-      <file>$PROJ_DIR$\AfSrc\Debug_F.h</file>
-      <file>$PROJ_DIR$\AfSrc\Includes_F.h</file>
-      <file>$PROJ_DIR$\AfSrc\Interrupt_F.h</file>
-      <file>$PROJ_DIR$\AfSrc\PowerAndClock_F.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.r51</file>
-      <file>$PROJ_DIR$\AfSrc\KeyCheck_F.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\Uart_F.r51</file>
-      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\Debug_F.h</file>
-      <file>$PROJ_DIR$\..\CC2530_TEST_SRC\Timer_F.h</file>
-      <file>$PROJ_DIR$\Debug\Exe\AfLib_F.lib</file>
-      <file>$PROJ_DIR$\Debug\Obj\Function_F.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\Gpio_F.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\UartWrite_F.r51</file>
-      <file>$TOOLKIT_DIR$\inc\clib\stdlib.h</file>
+      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
+      <file>$TOOLKIT_DIR$\inc\clib\stdarg.h</file>
+      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
+      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\UartWrite_F.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\HalAes_F.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\HalAes_F.r51</file>
       <file>$PROJ_DIR$\Debug\Obj\Led_F.pbi</file>
-      <file>$PROJ_DIR$\AfSrc\main.c</file>
     </outputs>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\Uart_F.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 44</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 41</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 85 83 75 53 21 84 86 18 5 1 3</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XAR</name>
+          <file> 49</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\UartRead_F.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 61</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 26</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 85 83 75 53 21 84 86 18 5 17 1 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 85 83 75 53 21 84 86 18 5 17 1 3</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\UartWrite_F.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 55</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 87</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 85 83 75 53 21 84 86 18 5 1 3</file>
+        </tool>
+      </inputs>
+    </file>
     <file>
       <name>$PROJ_DIR$\AfSrc\DataTransEnDecode_F.c</name>
       <outputs>
         <tool>
           <name>ICC8051</name>
-          <file> 40</file>
+          <file> 31</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 30</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7 18 85 83</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\Debug_F.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 27</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -106,11 +202,11 @@
       <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 2 9</file>
+          <file> 70 18 5 11 73 74 17 86 42 15 1 9</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 2 9</file>
+          <file> 70 18 5 11 73 74 17 86 42 15 1 9</file>
         </tool>
       </inputs>
     </file>
@@ -119,21 +215,36 @@
       <outputs>
         <tool>
           <name>ICC8051</name>
-          <file> 66</file>
+          <file> 68</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 79</file>
+          <file> 72</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
+          <name>BICOMP</name>
+          <file> 70 18 5 11 73 74 17 86 42 15 1 9</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\HalAes_F.c</name>
+      <outputs>
+        <tool>
           <name>ICC8051</name>
-          <file> 68 9 0 4 69 70 8 39 73 6 11 67</file>
+          <file> 89</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 68 9 0 4 69 70 8 39 73 6 11 67</file>
+          <file> 88</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 86 13 18 1 17</file>
         </tool>
       </inputs>
     </file>
@@ -142,21 +253,17 @@
       <outputs>
         <tool>
           <name>ICC8051</name>
-          <file> 65</file>
+          <file> 71</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 82</file>
+          <file> 90</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 68 9 0 4 69 70 8 39 73 6 11 67</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
-          <file> 68 9 0 4 69 70 8 39 73 6 11 67</file>
+          <file> 70 18 5 11 73 74 17 86 42 15 1 9</file>
         </tool>
       </inputs>
     </file>
@@ -165,140 +272,17 @@
       <outputs>
         <tool>
           <name>ICC8051</name>
-          <file> 19</file>
+          <file> 28</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 51</file>
+          <file> 66</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 39 8 9 14 11</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
-          <file> 39 8 9 14 11</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\AfSrc\Uart_F.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 74</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 44</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 33 37 31 81 28 35 39 9 0 11 14</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 33 37 31 81 28 35 39 9 0 11 14</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\AfSrc\UartWrite_F.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 80</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 38</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 33 37 31 81 28 35 39 9 0 11 14</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 33 37 31 81 28 35 39 9 0 11 14</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\AfSrc\UartRead_F.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 22</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 29</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 33 37 31 81 28 35 39 9 0 11 14</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 33 37 31 81 28 35 39 9 0 11 14</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\AF_LIB_F\Debug\Exe\AfLib_F.lib</name>
-      <inputs>
-        <tool>
-          <name>XAR</name>
-          <file> 22 80 74</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Function_F.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 78</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 25</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 15</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 15</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Debug\Exe\AF_LIB_F.r51</name>
-      <inputs>
-        <tool>
-          <name>XAR</name>
-          <file> 78</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\AF_LIB_F\Debug\Exe\AF_LIB_F.lib</name>
-      <inputs>
-        <tool>
-          <name>XAR</name>
-          <file> 22 80 74</file>
+          <file> 86 17 18 3 1</file>
         </tool>
       </inputs>
     </file>
@@ -307,67 +291,49 @@
       <outputs>
         <tool>
           <name>ICC8051</name>
-          <file> 74</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
           <file> 44</file>
         </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 33 37 31 81 28 35 39 54 52 26 58</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>[ROOT_NODE]</name>
-      <outputs>
-        <tool>
-          <name>XAR</name>
-          <file> 77</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\CC2530_TEST_SRC\UartIsr_F.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 17</file>
-        </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 21</file>
+          <file> 41</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 39 32 54 52 30 46 36 76 49 34 26 75 58</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 39 32 54 52 30 46 36 76 49 34 26 75 58</file>
+          <file> 85 83 75 53 21 84 86 78 24 65 80</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\Debug\Exe\AF_LIB_F.lib</name>
+      <name>$PROJ_DIR$\..\..\AF_LIB_F\Debug\Exe\AfLib_F.lib</name>
       <inputs>
         <tool>
           <name>XAR</name>
-          <file> 22 80 74</file>
+          <file> 61 55 44</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\Debug\Obj\AF_LIB_F.pbd</name>
+      <name>$PROJ_DIR$\Function_F.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 52</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 58</file>
+        </tool>
+      </outputs>
       <inputs>
         <tool>
-          <name>BILINK</name>
-          <file> 20 79 82 51 29 38 44</file>
+          <name>ICC8051</name>
+          <file> 40</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 40</file>
         </tool>
       </inputs>
     </file>
@@ -376,45 +342,26 @@
       <outputs>
         <tool>
           <name>ICC8051</name>
-          <file> 41</file>
+          <file> 19</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 43</file>
+          <file> 32</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 55 31 37</file>
+          <file> 38 75 83</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\AfSrc\uart_pkg\UartBasePackage_F.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 47</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 57 63</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 57 63</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\CC2530_TEST_SRC\UartRead_F.c</name>
+      <name>$PROJ_DIR$\..\CC2530_TEST_SRC\UartIsr_F.c</name>
       <outputs>
         <tool>
           <name>ICC8051</name>
-          <file> 22</file>
+          <file> 39</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -424,54 +371,20 @@
       <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 33 37 31 81 28 35 39 54 52 26 58</file>
+          <file> 86 33 78 24 76 46 37 51 47 79 65 48 80</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 86 33 78 24 76 46 37 51 47 79 65 48 80</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\CC2530_TEST_SRC\UartWrite_F.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 80</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 38</file>
-        </tool>
-      </outputs>
+      <name>$PROJ_DIR$\Debug\Exe\AF_LIB_F.lib</name>
       <inputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 33 37 31 81 28 35 39 54 52 26 58</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\AfSrc\uart_pkg\UartDecodeIF_F.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 50</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\AfSrc\uart_pkg\UartPackageIF_F.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 64</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 63</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 63</file>
+          <name>XAR</name>
+          <file> 61 55 44</file>
         </tool>
       </inputs>
     </file>
@@ -480,7 +393,7 @@
       <inputs>
         <tool>
           <name>XAR</name>
-          <file> 40 66 65 19 22 80 74</file>
+          <file> 31 27 68 89 71 28 61 55 44</file>
         </tool>
       </inputs>
     </file>
@@ -489,18 +402,126 @@
       <outputs>
         <tool>
           <name>ICC8051</name>
-          <file> 72</file>
+          <file> 50</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 71</file>
+          <file> 60</file>
         </tool>
       </outputs>
     </file>
-    <forcedrebuild>
-      <name>[MULTI_TOOL]</name>
-      <tool>XAR</tool>
-    </forcedrebuild>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\uart_pkg\UartBasePackage_F.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 34</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 56 62</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 56 62</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\uart_pkg\UartDecodeIF_F.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 35</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\AF_LIB_F\Debug\Exe\AF_LIB_F.lib</name>
+      <inputs>
+        <tool>
+          <name>XAR</name>
+          <file> 61 55 44</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\uart_pkg\UartPackageIF_F.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 69</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 62</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 62</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Obj\AF_LIB_F.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 30 20 72 88 90 66 26 87 41</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\AF_LIB_F.r51</name>
+      <inputs>
+        <tool>
+          <name>XAR</name>
+          <file> 52</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CC2530_TEST_SRC\UartRead_F.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 61</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 26</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 85 83 75 53 21 84 86 78 24 65 80</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CC2530_TEST_SRC\UartWrite_F.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 55</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 87</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 85 83 75 53 21 84 86 78 24 65 80</file>
+        </tool>
+      </inputs>
+    </file>
   </configuration>
   <configuration>
     <name>Release</name>

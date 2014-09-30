@@ -1,11 +1,9 @@
 
-#include <string.h>
-//#include <math.h>
+
+#include <stdio.h>
 #include <stdlib.h>
-#include "./AfSrc/DataTransEnDecode_F.h"
-
-
-
+#include <string.h>
+#include "DataTransEnDecode_F.h"
 
 U8 chIn[1024];
 U8 chOut[1024];
@@ -39,31 +37,18 @@ U8 CheckEncode(PTransEnDecodeFunc_t pTED)
 	return uRet;
 }
 
-int main( void )
+
+U8 DataTransTest()
 {
 	TransEnDecodeFunc_t ted;
 	DataTransInit(&ted);
 	
-//	char chIn[];
-//	char chOut[64];
-//	char chOut02[64];
-	
-
-//	U16 inLen;
-//	U16 outLen;
-//	U16 outLen02;	
-//	CreateInBuf(chIn,&inLen);	
-//	ted.pfnEncode(chIn,inLen,chOut,&outLen);	
-//	ted.pfnDecode(chOut,outLen,chOut02,&outLen02);
-	
-	U8 uOk = 1;
-	U8 uOk2 = 0;
+	U8 uOk = 1;	
 	for (int i=0;i<1024;++i) {
-		uOk2 = CheckEncode(&ted);
-		uOk = uOk & uOk2;
+		uOk &= CheckEncode(&ted);
 	}
 	
 	printf("uOk = %d\r\n",uOk);
 	
-	return 0;
+	return uOk;
 }

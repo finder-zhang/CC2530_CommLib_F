@@ -150,7 +150,7 @@
         </option>
         <option>
           <name>RTLibraryPath</name>
-          <state>$TOOLKIT_DIR$\LIB\CLIB\cl-pli-nsid-1e16x01.r51</state>
+          <state>$TOOLKIT_DIR$\LIB\CLIB\cl-pli-blxd-1e16x01.r51</state>
         </option>
         <option>
           <name>Input variant</name>
@@ -439,7 +439,7 @@
         </option>
         <option>
           <name>CCIncludePath2</name>
-          <state></state>
+          <state>$PROJ_DIR$/AfSrc</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -452,7 +452,7 @@
         </option>
         <option>
           <name>CCOverrideModuleTypeDefault</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CCRadioModuleType</name>
@@ -698,11 +698,11 @@
         </option>
         <option>
           <name>XOutOverride</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>OutputFile</name>
-          <state>LIB_USE_DEMO.d51</state>
+          <state>LIB_USE_DEMO.hex</state>
         </option>
         <option>
           <name>OutputFormat</name>
@@ -768,7 +768,7 @@
         </option>
         <option>
           <name>XclFile</name>
-          <state>$TOOLKIT_DIR$\config\devices\_generic\lnk51ew_plain.xcl</state>
+          <state>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_CC2530F256_banked.xcl</state>
         </option>
         <option>
           <name>XclFileSlave</name>
@@ -872,7 +872,7 @@
         </option>
         <option>
           <name>DebugInformation</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>RuntimeControl</name>
@@ -2064,15 +2064,87 @@
       <data/>
     </settings>
   </configuration>
-  <file>
-    <name>$PROJ_DIR$\AfSrc\DataTransEnDecode_F.c</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\AfSrc\DataTransEnDecode_F.h</name>
-  </file>
-  <file>
-    <name>$PROJ_DIR$\main.c</name>
-  </file>
+  <group>
+    <name>AfSrc</name>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\CommonDef_F.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\DataTransEnDecode_F.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\DataTransEnDecode_F.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\Debug_F.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\Debug_F.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\Dma_F.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\Dma_F.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\hal_aes.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\hal_aes.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\HalAes_F.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\HalAes_F.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\PowerAndClock_F.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\PowerAndClock_F.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\Timer_F.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\Timer_F.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\TypeDef_F.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\Uart_F.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\Uart_F.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\UartInternal_F.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\UartIsr_F.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\UartRead_F.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\UartWrite_F.c</name>
+    </file>
+  </group>
+  <group>
+    <name>AfTestApp</name>
+    <file>
+      <name>$PROJ_DIR$\AfTestAppSrc\AesTest.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfSrc\DataTransEnDecodeApp_F.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\AfTestAppSrc\main.c</name>
+    </file>
+  </group>
 </project>
 
 

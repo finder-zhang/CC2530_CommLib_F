@@ -57,10 +57,10 @@ void TimerInit(void)
 //This function can success even _TimeTick is overflow.
 //delay must base on Timer3's _TimeTick count,
 //_TimeTick 's unit is 0.1mS
-void DelayMs(U8 uTime)
+void DelayMs(U16 wTime)
 {
 	U32 tmp = _TimeTick;
-	tmp += uTime*10;
+	tmp += wTime*10;
 	while(tmp != _TimeTick){ }
 }
 

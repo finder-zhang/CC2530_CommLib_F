@@ -31,7 +31,39 @@ typedef struct _TransEnDecodeFunc
 }TransEnDecodeFunc_t,*PTransEnDecodeFunc_t;
 
 
+typedef enum _CatchPackageStatus
+{
+	CPS_NULL			= 0,
+	CPS_CATCHING		,
+	CPS_COMPLETE
+//	CPS_DATA_ERROR
+}CatchPackageStatus;
+
 void DataTransInit(PTransEnDecodeFunc_t pTransFunc);
+CatchPackageStatus DEN_CatchPackage(U8 uByte);			//在串口接收函数处调用
+BOOL DEN_GetPackage(U16* pwLen,U8* pData);
+
+
+/*********************************************************
+使用方法：
+void main()
+{
+	TransEnDecodeFunc_t		ted;
+	DataTransInit(&ted);
+}
+
+
+
+U16 wLen;
+U8 uRxBuf[256];
+
+xxx 串口中断或回调(U8 uByte)
+{
+	if ( CPS_COMPLETE == DEN_CatchPackage(uByte) ) {
+		DEN_GetPackage(&wLen,uRxBuf);		//这样就得到了数据的长度与内容
+	}
+}
+*********************************************************/
 
 
 

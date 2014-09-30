@@ -12,7 +12,9 @@
 #define FALSE			(0)
 #endif //FALSE
 
-
+#ifndef NULL
+#define NULL			0//((void*)0)
+#endif//NULL
 
 
 

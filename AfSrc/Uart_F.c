@@ -32,9 +32,23 @@ UART_OPERATOR		u1;
 		return NULL;\
 		break;\
 	}
+
+U8 SetBaud_(U8 uNum,U32 dwBaudrate)
+{
+	switch (dwBaudrate) {
+	case 115200:
+		break;
+	case 9600:
+		break;
+	default:
+		return FALSE;
+		break;
+	}
+	return TRUE;
+}
 		
 
-UART_HANDLE			UART_Open(U8 uNum,U16 wBaudrate)
+UART_HANDLE			UART_Open(U8 uNum,U32 wBaudrate)
 {
 	switch (uNum) {
 	case 0:
@@ -52,7 +66,7 @@ UART_HANDLE			UART_Open(U8 uNum,U16 wBaudrate)
 		return &u0;
 		break;
 		
-	case 1:		
+	case 1:
 		return &u1;
 		break;
 	default:

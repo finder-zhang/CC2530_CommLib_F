@@ -12,6 +12,7 @@
 
 #include "TypeDef_F.h"
 #include "CommonDef_F.h"
+#include "Timer_F.h"
 #include "Uart_F.h"
 #include "UartInternal_F.h"
 
@@ -19,9 +20,9 @@
 
 //=============================================串口0接收中断
 __interrupt void Uart0Rx_ISR(void);
-#pragma vector = URX0_VECTOR 
-__interrupt void Uart0Rx_ISR(void) 
-{ 
+#pragma vector = URX0_VECTOR
+__interrupt void Uart0Rx_ISR(void)
+{
     URX0IF = 0;       // 清中断标志
 	PushRxByte(&u0,U0DBUF);
 	u0.wReadTimeoutCount = 0;
@@ -30,9 +31,9 @@ __interrupt void Uart0Rx_ISR(void)
 
 //=============================================串口1接收中断
 __interrupt void Uart1Rx_ISR(void);
-#pragma vector = URX1_VECTOR 
-__interrupt void Uart1Rx_ISR(void) 
-{ 
+#pragma vector = URX1_VECTOR
+__interrupt void Uart1Rx_ISR(void)
+{
     URX1IF = 0;       // 清中断标志
 	PushRxByte(&u1,U1DBUF);
 	u1.wReadTimeoutCount = 0;
@@ -152,4 +153,37 @@ UartBufLen	UART_Read(UART_HANDLE pH,U8 *outBuf,UartBufLen uLen)
 		outBuf[i] = PopRxByte(pH);
 	}
 	return i;
+}
+
+
+UartBufLen			UART_ReadTimeout(UART_HANDLE pH,U8* outBuf,UartBufLen uLen,U32 dwMilliSeconds)
+{
+	//开始时间，结束时间，最近时间等变量，用于检测超时退出
+	U32 dwTickStart = GetTickCount();
+	U32 dwTickTimeout = dwMilliSeconds * 10;
+	U32 dwTickEnd = dwTickStart + dwTickTimeout;
+	U32 dwTickCurr = dwTickStart;
+	
+	//时间 Tick 为32位，有溢出可能，先计算是否有溢出
+	BOOL bOverflow = dwTickEnd < dwTickStart;	//Check is TimeTick rollback
+	
+	UartBufLen uReaded = 0;
+	
+	while( uReaded < uLen )
+	{
+		uReaded += UART_Read(pH,outBuf + uReaded,uLen - uReaded);
+		dwTickCurr = GetTickCount();
+		if ( bOverflow ) {		//有溢出时的判断
+			if ( (dwTickCurr >= dwTickEnd) && (dwTickCurr < dwTickStart) ) {
+				break;
+			}
+		}
+		else {		//没溢出时
+			if ( dwTickCurr >= dwTickEnd ) {
+				break;
+			}
+		}
+	}
+	
+	return uReaded;
 }
