@@ -30,14 +30,17 @@ typedef struct _UartOperator
 	UartBufLen			uTxTail;
 	UartBufLen			uTxLen;
 
-	U16					wReadTimeout;			//读取超时
+	U16					wReadTimeoutMilliSeconds;	//读取超时
 	volatile U16		wReadTimeoutCount;		//读取超时计数，当wReadTimeoutCount >= wReadTimeout 时则超时了
 	
 	volatile U8			uTxActive;				//0：发送空闲  1：发送忙  用于决定等待还是开启一个新的发送
 		
 	U8					uNum;					//串口号，范围 1 ～ 2
 	
-	fn_Readed_t			pfnReaded;
+	BOOL				bReading;
+	ReadMode			eReadMode;
+	
+	fnRxHandler_t		fnRxHandler;
 
 }UART_OPERATOR,*PUART_OPERATOR;
 

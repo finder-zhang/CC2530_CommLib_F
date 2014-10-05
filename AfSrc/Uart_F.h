@@ -12,15 +12,24 @@ typedef		U8				UartBufLen;
 typedef		void*			UART_HANDLE;
 
 //==============================================回调函数定义
-typedef void (* fn_Readed_t)(void);		//读取一段内容已经完成
+typedef void (* fnRxHandler_t)(void);		//读取一段内容已经完成
+
+typedef enum _ReadMode
+{
+	RMODE_AUTO	= 0,
+	RMODE_ASYNC,
+	RMODE_SYNC,
+	RMODE_MAX_IDX = RMODE_SYNC
+}ReadMode;
 
 
 //==============================================共用部份
 //void				UART_Init(void);
 UART_HANDLE			UART_Open(U8 uNum,U32 wBaudrate);			//这个函数是一定要调用的
-void				UART_SetDebugHandle(UART_HANDLE uH);			//这个函数是一定要调用的
-void				UART_SetReadTimeout(UART_HANDLE uH,U16 wTimeout);	//读取时的超时，uTimeout以0.1毫秒为单位
-void				UART_SetReadCallback(UART_HANDLE uH,fn_Readed_t pfnReaded);
+BOOL				UART_SetDebugHandle(UART_HANDLE uH);			//这个函数是一定要调用的
+BOOL				UART_SetReadTimeout(UART_HANDLE uH,U16 wTimeoutMilliSeconds);	//读取时的超时，uTimeout以0.1毫秒为单位
+BOOL				UART_SetReadMode(UART_HANDLE uH,ReadMode mode);
+fnRxHandler_t		UART_SetReadCallback(UART_HANDLE uH,fnRxHandler_t pfnReaded);
 void				UART_Poll(void);
 void				Uprintf(const char* ch,...);
 

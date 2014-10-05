@@ -99,34 +99,65 @@ static U8			IsRxFull(UART_HANDLE pH)
 //不可长时间执行
 void UART_TimeTick()
 {
-	if (u0.wReadTimeoutCount < u0.wReadTimeout) {
+	if (u0.wReadTimeoutCount < u0.wReadTimeoutMilliSeconds) {
 		++u0.wReadTimeoutCount;
 	}
-	if (u1.wReadTimeoutCount < u1.wReadTimeout) {
+	if (u1.wReadTimeoutCount < u1.wReadTimeoutMilliSeconds) {
 		++u0.wReadTimeoutCount;
+	}
+}
+
+static void _UART_Poll(PUART_OPERATOR pU)
+{
+	//如果超时时间到，并且有长度，则执行读超时
+	if (	(pU->wReadTimeoutCount >= pU->wReadTimeoutMilliSeconds)
+		&&	(pU->uRxLen > 0)		)
+	{
+		if ( pU->pfnReaded ) {
+			if ( RMODE_ASYNC == pU->eReadMode ) {
+				pU->pfnReaded();
+			}
+			if ( (RMODE_AUTO == pU->eReadMode) && (FALSE == pU->bReading) ) {
+				pU->pfnReaded();
+			}
+		}
 	}
 }
 
 //串口检测，该函数由主循环周期性地调用
 void UART_Poll(void)
 {
-	//如果超时时间到，并且有长度，则执行读超时
-	if (	(u0.wReadTimeoutCount >= u0.wReadTimeout)
-		&&	(u0.uRxLen > 0)		)
-	{
-		if ( u0.pfnReaded ) {
-			u0.pfnReaded();
-		}
-	}
+	_UART_Poll(&u0);
+	_UART_Poll(&u1);
 	
 		
-	if (	(u1.wReadTimeoutCount >= u1.wReadTimeout)
-		&&	(u1.uRxLen > 0)		)
-	{
-		if ( u1.pfnReaded ) {
-			u1.pfnReaded();
-		}
-	}
+	//如果超时时间到，并且有长度，则执行读超时
+//	if (	(u0.wReadTimeoutCount >= u0.wReadTimeoutMilliSeconds)
+//		&&	(u0.uRxLen > 0)		)
+//	{
+//		if ( u0.pfnReaded ) {
+//			if ( RMODE_ASYNC == u0.eReadMode ) {
+//				u0.pfnReaded();				
+//			}
+//			if ( (RMODE_AUTO == u0.eReadMode) && (FALSE == u0.bReading) ) {
+//				u0.pfnReaded();
+//			}
+//		}
+//	}
+//	
+//		
+//	if (	(u1.wReadTimeoutCount >= u1.wReadTimeoutMilliSeconds)
+//		&&	(u1.uRxLen > 0)		)
+//	{
+//		if ( u1.pfnReaded ) {
+//			if ( RMODE_ASYNC == u1.eReadMode ) {
+//				u1.pfnReaded();
+//			}
+//			if ( (RMODE_AUTO == u1.eReadMode) && (FALSE == u1.bReading) ) {
+//				u1.pfnReaded();
+//			}
+//		}
+//	}
 }
 
 
@@ -158,6 +189,9 @@ UartBufLen	UART_Read(UART_HANDLE pH,U8 *outBuf,UartBufLen uLen)
 
 UartBufLen			UART_ReadTimeout(UART_HANDLE pH,U8* outBuf,UartBufLen uLen,U32 dwMilliSeconds)
 {
+	PUART_OPERATOR pU = (PUART_OPERATOR)pH;
+	pU->bReading = TRUE;
+	
 	//开始时间，结束时间，最近时间等变量，用于检测超时退出
 	U32 dwTickStart = GetTickCount();
 	U32 dwTickTimeout = dwMilliSeconds * 10;
@@ -184,6 +218,8 @@ UartBufLen			UART_ReadTimeout(UART_HANDLE pH,U8* outBuf,UartBufLen uLen,U32 dwMi
 			}
 		}
 	}
+	
+	pU->bReading = FALSE;
 	
 	return uReaded;
 }
